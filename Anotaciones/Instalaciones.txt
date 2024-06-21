@@ -1,0 +1,9 @@
+Advertencia=
+Hay paquetes que no tienen tipos creados, 
+buscar en la web
+
+Nota: 
+Los tipos instalarlos como dependencia de desarrollo
+
+Express:
+npm i @type/express -D

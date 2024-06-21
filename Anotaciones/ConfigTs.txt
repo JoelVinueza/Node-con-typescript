@@ -1,0 +1,5 @@
+Recomendacion para tsconfig.json:
+activar outDir que son los achivos compilados y poner "./build"
+activar noUnusedLocals que te dice si hay variable local sin utilizar
+activar noImplicitReturn para obligar a hacer un return en toda funcion, asi sea undefined
+activar noFallthroughCasesInSwitch lo mismo de las funciones pero en Swtich@

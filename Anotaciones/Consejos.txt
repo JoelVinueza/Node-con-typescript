@@ -1,0 +1,2 @@
+Para un poder dejar parametros sin usar puedes poner _
+asi ts lo ignora.

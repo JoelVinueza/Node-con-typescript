@@ -1,0 +1,11 @@
+Iniciar proyecto normalmente:
+npm init
+
+Instalar ts como dependencia:
+npm i typescript -D
+
+Configurar scripts de package.json:
+"tsc": "tsc"
+
+Inicializar ts:
+npm run tsc -- --init
