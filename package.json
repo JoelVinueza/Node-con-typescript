@@ -15,7 +15,15 @@
   "author": "Joel Vinueza",
   "license": "GPL-3.0",
   "devDependencies": {
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.5.2"
+    "@types/express": "^4.17.21",
+    "@types/socket.io": "^3.0.2",
+    "ts-node-dev": "2.0.0",
+    "typescript": "5.5.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "4.19.2",
+    "socket.io": "4.7.5",
+    "socket.io-client": "^4.7.5"
   }
 }

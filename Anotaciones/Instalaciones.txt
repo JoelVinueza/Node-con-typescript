@@ -5,5 +5,6 @@ buscar en la web
 Nota: 
 Los tipos instalarlos como dependencia de desarrollo
 
-Express:
-npm i @type/express -D
+Types:
+npm i @types/express -D
+npm i @types/socket.io -D
