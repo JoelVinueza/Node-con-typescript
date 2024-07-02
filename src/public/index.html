@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sockets</title>
 </head>
 <body>
-    <script src="../libs/jquery-3.7.1.min.js"></script>
-    <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <h1> SignIn</h1>
+    <form>
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="userName" placeholder="UserName">
+        <input type="button" value="LogIn" onclick="login()">
+    </form>
+
+    <hr>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="login.js"></script>
     <script>
         const socket = io.connect();
+        socket.emit('userData', {email: 'janny@gmail.com', userName: 'Janny'});
+
+        socket.on('greeting',(data)=>{
+            alert('Welcome '+ data.userName);
+        });
     </script>
+
+    
+    
 </body>
 </html>

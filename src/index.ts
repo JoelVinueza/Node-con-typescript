@@ -9,8 +9,9 @@ const io = new SocketIOServer(server);
 io.on('connection', (socket) =>{
     console.log('A user connected:', socket.id);
     
-    socket.on('disconnected', () =>{
-        console.log('A user disconnected:', socket.id);
+    socket.on('userData', (data) =>{
+        console.log('User connected:', data.userName);
+        io.emit('greeting',{userName: data.userName});
     });
 
 

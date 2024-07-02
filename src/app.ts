@@ -1,11 +1,10 @@
 import express from "express";
+import path from 'path';
 
-const app = express();
+export const app = express();
 
 app.set("port", process.env.PORT || 4000);
 
-app.get('/', (_req, res) => {
-    res.send('Hello World with Typescript');
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
 export default app;
