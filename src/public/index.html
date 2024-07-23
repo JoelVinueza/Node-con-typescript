@@ -6,27 +6,46 @@
     <title>Sockets</title>
 </head>
 <body>
+    <style>
+        #chat{
+            width: 50%; 
+            background: #000000; 
+            border: solid 2px black;
+        }
+        p{
+            background: #f07707; 
+            padding: 5px; 
+            border: solid 1px black;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+
     <h1> SignIn</h1>
-    <form>
+    <form accept-charset="UTF-8" id="login_form">
         <input type="text" id="email" placeholder="Email">
         <input type="text" id="userName" placeholder="UserName">
         <input type="button" value="LogIn" onclick="login()">
     </form>
-
     <hr>
+    <h3>Chat</h3>
+    <div id="chat">
+        
+    </div>
 
+    <div style=" display: flex; justify-content: flex-start; align-items: center;">
+        <textarea name="" id="message" placeholder="message" style="width: 400px;"></textarea>
+        <button id="enviar" onclick="sendMessage()" style="height: 100%; background: #f07707; color: black; padding: 10px;"> Enviar:</button>
+    </div>
+
+    
+    <h1>socket.io</h1>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="login.js"></script>
+    <script src="socket.io.js"></script>
     <script>
-        const socket = io.connect();
-        socket.emit('userData', {email: 'janny@gmail.com', userName: 'Janny'});
 
-        socket.on('greeting',(data)=>{
-            alert('Welcome '+ data.userName);
-        });
     </script>
-
     
     
 </body>
